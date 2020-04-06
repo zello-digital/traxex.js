@@ -1,0 +1,11 @@
+{
+  "name": "traxex-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/trantrungisk5/traxex.js.git",
+  "author": "Trần Trung <trantrungisk5@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "git-reset": "git reset --hard HEAD"
+  }
+}
