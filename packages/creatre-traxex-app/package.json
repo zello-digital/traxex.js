@@ -1,0 +1,22 @@
+{
+  "name": "creatre-traxex-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "create-traxex-app": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "3.0.0",
+    "commander": "4.1.0",
+    "cross-spawn": "7.0.1",
+    "envinfo": "7.5.0",
+    "fs-extra": "8.1.0",
+    "hyperquest": "2.1.3",
+    "inquirer": "7.0.4",
+    "semver": "6.3.0",
+    "tar-pack": "3.4.1",
+    "tmp": "0.1.0",
+    "validate-npm-package-name": "3.0.0"
+  }
+}
