@@ -182,3 +182,54 @@ function createApp() {
     version = "react-scripts@0.9.x";
   }
 }
+
+// TODO: Run :_)
+run(
+  root,
+  appName,
+  version,
+  verbose,
+  originalDirectory,
+  template,
+  useYarn,
+  usePnp
+);
+
+function getInstallPackage(version, originalDirectory) {
+  let packageToInstall = "react-scripts";
+  const validSemver = semver.valid(version);
+  if (validSemver) {
+    packageToInstall += `@${validSemver}`;
+  } else if (version) {
+    if (version[0] === "@" && !version.includes("/")) {
+      packageToInstall += version;
+    } else if (version.match(/^file:/)) {
+      packageToInstall = `file:${path.resolve(
+        originalDirectory,
+        version.match(/^file:(.*)?$/)[1]
+      )}`;
+    } else {
+      // for tar.gz or alternative paths
+      packageToInstall = version;
+    }
+  }
+}
+
+function run(
+  root,
+  appName,
+  version,
+  verbose,
+  originalDirectory,
+  template,
+  useYarn,
+  usePnp
+) {
+  Promise.all([
+    getInstallPackage(version, originalDirectory),
+    getTemplateInstallPackage(template, originalDirectory),
+  ]).then(([packageToInstall, templateToInstall]) => {
+    const allDependencies = ["react", "react-dom", packageToInstall];
+    console.log("Installing packages. This might take a couple of minutes.");
+  });
+}
