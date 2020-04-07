@@ -11,10 +11,13 @@
     "commander": "4.1.0",
     "cross-spawn": "7.0.1",
     "envinfo": "7.5.0",
+    "figlet": "^1.3.0",
     "fs-extra": "8.1.0",
     "hyperquest": "2.1.3",
     "inquirer": "7.0.4",
+    "prompts": "^2.3.2",
     "semver": "6.3.0",
+    "shelljs": "^0.8.3",
     "tar-pack": "3.4.1",
     "tmp": "0.1.0",
     "validate-npm-package-name": "3.0.0"
